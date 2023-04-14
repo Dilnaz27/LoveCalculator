@@ -1,7 +1,6 @@
 package com.geektech.lovecalculator.onboard.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView.Adapter
@@ -55,8 +54,7 @@ class OnBoardAdapter(private val onStartClick: () -> Unit) :
         ViewHolder(binding.root) {
         fun bind(onBoard: OnBoard) {
             binding.apply {
-                //imgBoard.setImageResource(onBoard.image)
-                onBoard.image.let { imgBoard.setAnimation(it) }
+                onBoard.image?.let { imgBoard.setAnimation(it) }
                 tvTittle.text = onBoard.tittle
                 tvDescription.text = onBoard.desc
             }
