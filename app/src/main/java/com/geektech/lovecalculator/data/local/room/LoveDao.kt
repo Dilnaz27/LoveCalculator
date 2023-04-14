@@ -1,4 +1,4 @@
-package com.geektech.lovecalculator.room
+package com.geektech.lovecalculator.data.local.room
 
 import androidx.room.Dao
 import androidx.room.Insert

@@ -17,21 +17,21 @@ class OnBoardAdapter(private val onStartClick: () -> Unit) :
         OnBoard(
             "Have a good time",
             "You should take the time to help those who need you",
-            R.drawable.img
+            R.raw.love
         ),
         OnBoard(
             "Cherishing love",
             "It is now no longer possible for you to cherish love",
-            R.drawable.wedding
+            R.raw.love_and_kind
         ),
         OnBoard(
             "Have a break up?",
             "We have made the correction for you don't worry. Maybe someone is waiting for you",
-            R.drawable.img_1
+            R.raw.heart_love_animation
         ),
         OnBoard(
             "It's Funs and Many more", "",
-            R.drawable.start
+            R.raw.book_lover
         )
     )
 
@@ -55,7 +55,8 @@ class OnBoardAdapter(private val onStartClick: () -> Unit) :
         ViewHolder(binding.root) {
         fun bind(onBoard: OnBoard) {
             binding.apply {
-                imgBoard.setImageResource(onBoard.image)
+                //imgBoard.setImageResource(onBoard.image)
+                onBoard.image.let { imgBoard.setAnimation(it) }
                 tvTittle.text = onBoard.tittle
                 tvDescription.text = onBoard.desc
             }

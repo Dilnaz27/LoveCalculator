@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.airbnb.lottie.LottieAnimationView
 import com.geektech.lovecalculator.R
 import com.geektech.lovecalculator.data.Pref
 import com.geektech.lovecalculator.databinding.FragmentOnBoardBinding
@@ -17,6 +18,7 @@ class OnBoardFragment : Fragment() {
 
     private lateinit var binding: FragmentOnBoardBinding
     private lateinit var adapter: OnBoardAdapter
+    private lateinit var animation: LottieAnimationView
     @Inject
     lateinit var pref: Pref
 
@@ -35,6 +37,7 @@ class OnBoardFragment : Fragment() {
         binding.viewPager.adapter = adapter
         setIndicator()
         if (pref.isUserSeen()){
+            animation.playAnimation()
             findNavController().navigate(R.id.calculatorFragment)
         }
     }

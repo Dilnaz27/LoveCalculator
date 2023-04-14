@@ -2,7 +2,7 @@ package com.geektech.lovecalculator
 
 import android.app.Application
 import androidx.room.Room
-import com.geektech.lovecalculator.room.AppDatabase
+import com.geektech.lovecalculator.data.local.room.AppDatabase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
