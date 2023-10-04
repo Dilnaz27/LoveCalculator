@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "love_table")
-data class LoveModel(
+data class  LoveModel(
     @SerializedName("fname")
     var firstName: String,
     @SerializedName("sname")

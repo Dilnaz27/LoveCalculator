@@ -39,7 +39,7 @@ class ResultFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun result() {
         binding.apply {
-            val result = arguments?.getSerializable("result") as LoveModel
+            val result = arguments?.getSerializable("key") as LoveModel
             tvYou.text = result.firstName
             tvMe.text = result.secondName
             tvPercent.text = result.percentage + "%"
